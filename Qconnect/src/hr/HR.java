@@ -2,10 +2,10 @@ package hr;
 
 public class HR {
 	String name;
-	long contact;
+	String contact;
 	String pass;
 	String email;
-	public HR(String name, long contact, String pass, String email) {
+	public HR(String name, String  contact, String pass, String email) {
 		super();
 		this.name = name;
 		this.contact = contact;

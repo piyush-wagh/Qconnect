@@ -33,12 +33,35 @@ public class Login {
 		System.out.println("ACCOUNT CREATION MODULE");
 		System.out.println("Username :");
 		String un = scanner.next();
+
+
+		//Phone Number class created Regex
 		System.out.println("Contact :");
-		long cont = scanner.nextLong();
-		System.out.println("Password :");
-		String pass = scanner.next();
-		System.out.println("Email :");
-		String email = scanner.next();
+        CredentialsValidator ph = new CredentialsValidator();
+        ph.PhoneValidator();
+        String cont = ph.phoneNumber;
+
+        //System.out.println(" the number is" + cont);
+		
+
+
+
+		//Password class will be created using regex
+		System.out.println("Enter valid password");
+		ph.PasswordValidator();
+		String  pass = ph.password;
+		//String pass = scanner.next();
+		
+		//Same i will make it for Emailid
+		System.out.println("Enter valid Email :");
+		ph.emailValidator();
+		String email = ph.email;
+		
+		//String email = scanner.next();
+
+
+
+
 		hr = new HR(un,cont,pass,email);
 	}
 	private  void loginHR() {
